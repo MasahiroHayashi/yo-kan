@@ -141,6 +141,9 @@ if(isset($_POST["chan"])) {
 	$tempfile = $_FILES['fname']['tmp_name'];
 	$filename2 = $_POST['filename'];
 	
+	//差し替えフラグ
+	$fileChangeFlag = false ;
+	
 	if (is_uploaded_file($tempfile)) { //一時ディレクトリに移動できたらtrue
 		
 		// ファイル本体を削除
@@ -159,6 +162,8 @@ if(isset($_POST["chan"])) {
 		
 		// サムネイル画像を作る
 		makeThumbnail($_FILES['fname']['name'] , $_POST["num"]);
+		
+		$fileChangeFlag = true ;
 	}
 			
 	//メモリ上のデータの修正
@@ -171,7 +176,7 @@ if(isset($_POST["chan"])) {
 			$alldata[$i]['license'] = $_POST["license"] ;
 			$alldata[$i]['copyright'] = $_POST["copyright"] ;
 			
-			if($filename2 != $_POST['filename']){ // ファイルの差し替えがあった場合のみ filesize と updtime を更新
+			if($fileChangeFlag){ // ファイルの差し替えがあった場合のみ filesize と updtime を更新
 				$alldata[$i]['filesize'] = filesize($filename) ;
 			
 				date_default_timezone_set('Asia/Tokyo');
