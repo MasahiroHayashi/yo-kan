@@ -1,0 +1,82 @@
+/*============  このCSS（setting.css）は設定画面用の共通スタイルシート  ============
+
+公開画面用の共通スタイルシートは index.css のほう。
+
+*/
+
+body{
+	background: #bbb;
+	background-size:  100%;
+	background-repeat: no-repeat;	
+	margin : 0 ;
+	font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+input {
+	font-size:large;
+}
+.contentS {
+	margin: 0 auto ;
+	margin-top: 40px ;
+	margin-bottom: 40px ;
+	width: 870px;
+	background: #fff;
+	line-height: 2;
+	padding: 30px 0 ;
+	/*  以下4行でヘッダー部分の左右のパディングを表現  */
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-left: 25px solid rgba(255,255,255, 0);
+	border-right: 25px solid rgba(255,255,255, 0);
+}
+.contentS select{
+	height: 30px;
+}
+.textBoxN ,.textBoxW ,.textBoxH{
+	margin: 0 0 10px 0;
+}
+.textBoxN {	width: 200px;}
+.textBoxW {	width: 500px;}
+.textBoxH {	width: 100%; height: 150px;}
+.logoutButton {
+	display:inline-block;
+	float:right;
+}
+.kaisetsuArea {
+	font-size:small;
+	width:100%;
+	border: 1px solid #aaa;
+	margin-bottom:40px;
+	border-radius: 5px;
+	color:#444;
+	padding:4px;
+	background: #eee ;
+}
+hr {
+	margin:20px 0 ;
+	clear:both;
+}
+
+@media screen and (max-width: 910px) {
+	.contentS {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 650px) {
+	input {
+		font-size:90%;
+	}
+	.contentS {
+		border-left: 15px solid rgba(255,255,255, 0);
+		border-right: 15px solid rgba(255,255,255, 0);
+		font-size: 90%;
+	}
+	.textBoxN ,.textBoxW ,.textBoxH{
+		width: 90%;
+		display:block;
+		margin: 0;
+	}
+	.logoutButton {
+		display:inline-block;
+		float:none;
+	}
+}
