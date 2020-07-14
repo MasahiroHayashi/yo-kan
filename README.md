@@ -69,9 +69,9 @@ SMTP_HOST      　    smtp.gmail.com
 SMTP_ACCOUNT         xxxxxx@gmail.com
 SMTP_PASSWORD        yourgmailpass
 ```
-※GmailのSMTPを利用する場合は以下のいずれかの手続きが必要です。
- ・2段階認証を有効にし、その際に発行されたアプリパスワードを用いる（推奨）
- ・または「安全性の低いアプリの許可」を有効にする（非推奨）
+※GmailのSMTPを利用する場合は以下のいずれかの手続きが必要です。<br>
+ ・2段階認証を有効にし、その際に発行されたアプリパスワードを用いる（推奨）<br>
+ ・または「安全性の低いアプリの許可」を有効にする（非推奨）<br>
 
 **composer.json**
 ```bash
